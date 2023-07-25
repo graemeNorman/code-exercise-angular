@@ -1,0 +1,21 @@
+.status-pill {
+  border-radius: 1rem;
+  padding: 0.25rem;
+  background-color: #09cb3d;
+  font-size: 0.7rem;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  &--onTime {
+    background-color: #09cb3d;
+  }
+
+  &--early {
+    background-color: #12acd4;
+  }
+
+  &--late {
+    background-color: #e93131;
+  }
+}

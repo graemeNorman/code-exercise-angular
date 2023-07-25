@@ -1,0 +1,20 @@
+<table class="order-list">
+  <thead class="header">
+  <tr>
+    <th>Order</th>
+    <th>Driver</th>
+    <th>Tracking</th>
+    <th>Vendor</th>
+    <th>Status</th>
+    <th>Customer</th>
+    <th>Price</th>
+  </tr>
+  </thead>
+  <tbody>
+  <app-order-row
+      *ngFor="let order of orders"
+      [order]="order"
+      test-id="order-row">
+  </app-order-row>
+  </tbody>
+</table>

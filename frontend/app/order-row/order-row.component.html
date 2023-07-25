@@ -1,0 +1,9 @@
+<td class="cell cell--centered">{{ order.id }}</td>
+<td class="cell">{{ order.driverName }}</td>
+<td class="cell cell--centered">🌍</td>
+<td class="cell">{{ order.vendor }}</td>
+<td class="cell cell--centered">
+  <app-status-pill [delayMinutes]="order.delayMinutes"></app-status-pill>
+</td>
+<td class="cell">{{ order.customer }}</td>
+<td class="text-center">{{ order.totalPrice | currency:'GBP':'£':'1.0-0' }}</td>

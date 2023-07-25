@@ -1,0 +1,13 @@
+:host {
+  display: table-row;
+  background-color: #e6e6e7;
+  border: 1px solid #d4d4d4;
+}
+
+.cell {
+  padding: 0.5rem 0.25rem;
+
+  &--centered {
+    text-align: center;
+  }
+}

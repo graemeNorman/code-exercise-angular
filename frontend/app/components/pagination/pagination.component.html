@@ -1,0 +1,47 @@
+
+<p class="current-page">Current Page: {{ paginationData.page }}</p>
+
+<ul class="pagination">
+  <li>
+    <button class="first-page"
+            type="button"
+            (click)="paginationFirstPage()"
+            [class.disabled]="paginationData.page === 1"
+            [disabled]="paginationData.page === 1">
+      First Page
+    </button>
+  </li>
+  <li>
+    <button class="previous-page"
+            type="button"
+            (click)="paginationPrev()"
+            [class.disabled]="paginationData.page === 1"
+            [disabled]="paginationData.page === 1">
+      Previous Page
+    </button>
+  </li>
+  <li>Go to page:
+      <input type="number"
+             class="go-to-page"
+             [ngModel]="paginationData.page"
+             (blur)="goToPage($event)" />
+  </li>
+  <li>
+    <button class="next-page"
+            type="button"
+            (click)="paginationNext()"
+            [class.disabled]="paginationData.page === (paginationData.total / paginationData.count)"
+            [disabled]="paginationData.page === (paginationData.total / paginationData.count)">
+      Next Page
+    </button>
+  </li>
+  <li>
+    <button class="last-page"
+            type="button"
+            (click)="paginationLastPage()"
+            [class.disabled]="paginationData.page === (paginationData.total / paginationData.count)"
+            [disabled]="paginationData.page === (paginationData.total / paginationData.count)">
+      Last Page
+    </button>
+  </li>
+</ul>
